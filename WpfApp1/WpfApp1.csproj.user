@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="View\AddWindow\AddClientWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AddWindow\AddDiscountWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AddWindow\AddHotelWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AddWindow\AddNewCountryWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AddWindow\AddNutritionWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AddWindow\AddStaffWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AddWindow\AddTourTypeWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AddWindow\AddTourWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AdminMainWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AgentMainWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\AddWindow\AddClientWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddWindow\AddDiscountWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddWindow\AddHotelWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddWindow\AddNewCountryWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddWindow\AddNutritionWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddWindow\AddStaffWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddWindow\AddTourTypeWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddWindow\AddTourWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AdminMainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AgentMainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

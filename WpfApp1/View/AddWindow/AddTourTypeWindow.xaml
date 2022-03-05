@@ -1,0 +1,66 @@
+﻿<Window x:Class="WpfApp1.View.AddWindow.AddTourTypeWindow"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="408"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:viewModel="clr-namespace:WpfApp1.ViewModel"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Name="AddTypeWin">
+    <Window.DataContext>
+        <viewModel:DataManage/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+
+
+        <TextBox
+            Grid.Row="0"
+                 x:Name="LoginBox"
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Center"
+                 materialDesign:HintAssist.Hint="Название"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                 Text="{Binding TourTypeType}"
+                 Height="50"
+                 Width="332" Cursor="IBeam"/>
+
+
+        <TextBox
+            Grid.Row="1"
+            x:Name="PriceBox"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            materialDesign:HintAssist.Hint="Цена"
+            Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+            Text="{Binding TourTypePrice}"
+            Height="50"
+            Width="332" Cursor="IBeam"/>
+
+        <Button Grid.Row="3"
+                Content="Добавить"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center" 
+                Width="332" Height="98"
+                CommandParameter="{Binding ElementName=AddTypeWin}"
+                Command="{Binding AddTourType}"
+                Style="{DynamicResource MaterialDesignRaisedLightButton}" Cursor="Hand"/>
+    </Grid>
+</Window>

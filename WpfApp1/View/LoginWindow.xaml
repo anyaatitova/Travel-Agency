@@ -1,0 +1,80 @@
+﻿<Window x:Class="WpfApp1.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1280"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:viewModel="clr-namespace:WpfApp1.ViewModel"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Name="LogWindow">
+    <Window.DataContext>
+        <viewModel:DataManage/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="1"
+                   Text="Вход в систему"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Style="{StaticResource MaterialDesignHeadline2TextBlock}" Height="72" Width="420"/>
+
+        <TextBox Grid.Row="3"
+                 x:Name="LoginBox"
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Center"
+                 materialDesign:HintAssist.Hint="Логин"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                 Text="{Binding Login}"
+                 Height="50"
+                 Width="500"/>
+
+        <ComboBox Grid.Row="2"
+                  HorizontalAlignment="Center"
+                  Height="50"
+                  Width="500"
+                  materialDesign:ComboBoxAssist.ShowSelectedItem="True"
+                  materialDesign:HintAssist.Hint="Должность"
+                  x:Name="DeliveryType"
+                  Text="{Binding Position}"
+                  Style="{StaticResource MaterialDesignComboBox}">
+            <TextBlock Style="{StaticResource MaterialDesignSubtitle1TextBlock}">Администратор</TextBlock>
+            <TextBlock Style="{StaticResource MaterialDesignSubtitle1TextBlock}">Турагент</TextBlock>
+        </ComboBox>
+
+        <TextBox Grid.Row="4"
+                 x:Name="PasswordBox"
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Center"
+                 materialDesign:HintAssist.Hint="Пароль"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                 Width="500"
+                 Text="{Binding Password}"
+                 Height="50" Cursor="IBeam"/>
+        <Button Grid.Row="5"
+                Content="Войти"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center" 
+                Width="500" Height="32"
+                Command="{Binding OpenWindow}"
+                Style="{DynamicResource MaterialDesignRaisedLightButton}"
+                CommandParameter="{Binding ElementName=LogWindow}" Cursor="Hand"/>
+    </Grid>
+</Window>
